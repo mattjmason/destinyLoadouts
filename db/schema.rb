@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_03_023345) do
+ActiveRecord::Schema.define(version: 2021_06_08_030212) do
 
   create_table "loadouts", force: :cascade do |t|
     t.string "type"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_06_03_023345) do
     t.string "secondary"
     t.string "heavy"
     t.string "character_class"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
