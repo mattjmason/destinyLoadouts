@@ -5,5 +5,8 @@ class LoadoutsController < ApplicationController
         erb :'/loadouts/index'
     end
      
+    get '/loadouts/new' do 
+        erb :'/loadouts/new'
+    end
 
 end
