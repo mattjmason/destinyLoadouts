@@ -13,7 +13,7 @@
   <% @user.loadouts.each do |loadout| %>
      <div class="card" style="width: 15rem; margin: 20px">
       <div class="text-center">
-       <div class="card-header"><a href='/loadouts/<%= loadout.id %>'><%= loadout.title %></a></div>
+       <div class="card-header"><a href='/loadouts/<%= loadout.id %>'><%= loadout.type %></a></div>
      </div>
 </div>
   <% end %>
