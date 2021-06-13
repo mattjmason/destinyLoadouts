@@ -1,5 +1,5 @@
 <div class="jumbotron">
-<h1 class="display-3"><%= @loadout.type %></h1>
+<h1 class="display-3"><%= @loadout.title %></h1>
 <p class="lead"><strong>Description: </strong> <%=@loadout.description%></p>
 <hr class="my-4">
 <p>Character Details</p>
@@ -9,3 +9,16 @@
   <li><%=@loadout.secondary%></li>
   <li><%=@loadout.heavy%></li>
 </ul>
+
+<a class="btn btn-info btn-sm" href="/loadouts/<%= @loadout.id %>/edit" role="button">Edit Loadout</a>
+ <br>
+ <% if @loadout.user_id == @user.id %>
+<form method="POST" action="/loadouts/<%= @loadout.id %>/delete">
+<input id="hidden" type="hidden" name="_method" value="delete">
+<button type="submit" class="btn btn-danger btn-sm">Delete Loadout</button>
+</form>
+<% end %>
+</div>
+<% if @loadout.user_id == @user.id %>
+  <div class="text-right"><a class="btn btn-success" style="margin: 20px" href="/loadouts" role="button">< Back to my Loadouts</a></div>
+<% end %>

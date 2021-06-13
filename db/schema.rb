@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_06_08_030212) do
 
   create_table "loadouts", force: :cascade do |t|
-    t.string "type"
+    t.string "title"
     t.text "description"
     t.string "primary"
     t.string "secondary"
