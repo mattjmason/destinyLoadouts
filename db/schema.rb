@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 2021_06_08_030212) do
   create_table "loadouts", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "character_class"
     t.string "primary"
     t.string "secondary"
     t.string "heavy"
-    t.string "character_class"
     t.integer "user_id"
   end
 

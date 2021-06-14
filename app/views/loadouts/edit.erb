@@ -11,6 +11,10 @@
     <input type="text" class="form-control" id="description" name="description" value="<%= @loadout.description %>" required>
  </div>
  <div class="form-group">
+<label for="character_class">Character Class *</label>
+<input type="text" class="form-control" id="character_class" name="character_class" value="<%= @loadout.character_class %>" required>
+</div>
+ <div class="form-group">
     <label for="primary">Primary *</label>
     <input type="text" class="form-control" id="primary" name="primary" value="<%= @loadout.primary %>" required>
  </div>
@@ -21,10 +25,6 @@
  <div class="form-group">
  <label for="heavy">Heavy *</label>
  <input type="text" class="form-control" id="heavy" name="heavy" value="<%= @loadout.heavy %>" required>
-</div>
-<div class="form-group">
-<label for="character_class">Character Class *</label>
-<input type="text" class="form-control" id="character_class" name="character_class" value="<%= @loadout.character_class %>" required>
 </div>
   <br><br>
 <button type="submit" class="btn btn-primary" style="margin-bottom: 20px">Save Your Changes</button>
