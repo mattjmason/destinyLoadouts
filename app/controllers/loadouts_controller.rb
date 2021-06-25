@@ -44,10 +44,10 @@ class LoadoutsController < ApplicationController
         if logged_in? && @loadout.user_id == current_user.id 
         @loadout.title = params[:title]
         @loadout.description = params[:description]
+        @loadout.character_class = params[:character_class]
         @loadout.primary = params[:primary]
         @loadout.secondary = params[:secondary]
-        @loadout.heavy = params[:secondary]
-        @loadout.character_class = params[:character_class]
+        @loadout.heavy = params[:heavy]
         @loadout.save 
         redirect "/loadouts/#{@loadout.id}"
       else
